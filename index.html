@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Pattern.</title>
+        <meta name="description" content="Patterns.">
+        <meta name="author" content="Fig">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div id="form-container">
+                <div class="form-title">Menu.</div>
+                <div>
+                    <button onclick="main.start()" class="button button1">go</button>
+                    <button onclick="main.stop()" class="button button3">stop</button>
+                    <button onclick="main.reset()" class="button button5">reset</button>
+
+                    <button onclick="main.setType('DefaultAnimator')" class="button button2" style="float:right;">lines</button>
+                    <button onclick="main.setType('OrbitAnimator')" class="button button2" style="float:right;">orbits</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="defaultAnimator.js"></script>
+        <script src="orbitAnimator.js"></script>
+        <script src="main.js"></script>
+        <script>
+            var main = new Main("DefaultAnimator");
+        </script>
+    </body>
+</html>
